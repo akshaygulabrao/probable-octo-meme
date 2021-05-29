@@ -8,7 +8,7 @@ from mininet.cli import CLI
 from mininet.net import Mininet
 
 numflows = 2
-loss_percent =0
+loss_percent =8
 
 class MPTopo(Topo):
     HOST_IP = '10.0.{0}.{1}'
@@ -56,7 +56,7 @@ topos = { 'mytopo': ( lambda: MyTopo() ) }
 
 def main():
     print('\n### TESTING MPTCP ###')
-    cc = 'reno'
+    cc = 'cubic'
     os.system('modprobe mptcp_balia; modprobe mptcp_wvegas; modprobe mptcp_olia; modprobe mptcp_coupled')
     os.system('sysctl -w net.mptcp.mptcp_enabled=1')
     os.system('sysctl -w net.mptcp.mptcp_path_manager=fullmesh')
