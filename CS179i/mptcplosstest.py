@@ -8,7 +8,7 @@ from mininet.cli import CLI
 from mininet.net import Mininet
 
 numflows = 2
-loss_percent =8
+loss_percent =10
 
 class MPTopo(Topo):
     HOST_IP = '10.0.{0}.{1}'
