@@ -56,7 +56,7 @@ topos = { 'mytopo': ( lambda: MyTopo() ) }
 
 def main():
     print('\n### TESTING MPTCP ###')
-    cc = 'cubic'
+    cc = 'pcc'
     os.system('modprobe mptcp_balia; modprobe mptcp_wvegas; modprobe mptcp_olia; modprobe mptcp_coupled')
     os.system('sysctl -w net.mptcp.mptcp_enabled=1')
     os.system('sysctl -w net.mptcp.mptcp_path_manager=fullmesh')
